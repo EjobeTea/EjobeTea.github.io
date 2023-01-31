@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <script scr= "https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Fredoka One', sans-serif;
+            color: white;
+            background: #260033;
+        }
+
+        p {
+            font-family: 'Fredoka';
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .first {
+            background-color: #213c4c;
+        }
+
+        .second {
+            background-color: #1e5a59;
+        }
+
+        .third {
+            background-color: #1b7865;
+        }
+
+        .fourth {
+            background-color: #3eb59d;
+        }
+
+        .fifth {
+            background-color: #8bd0c2;
+        }
+
+        .wave_left_bias {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave_left_bias svg {
+            position: relative;
+            display: block;
+            width: calc(124% + 1.3px);
+            height: 164px;
+            transform: rotateY(180deg);
+        }
+
+        .wave_left_bias .shape-fill {
+            fill: #260033;
+        }
+
+        .wave_bottom_right_bias {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave_bottom_right_bias svg {
+            position: relative;
+            display: block;
+            width: calc(279% + 1.3px);
+            height: 201px;
+            transform: rotateY(180deg);
+        }
+
+        .wave_bottom_right_bias .shape-fill {
+            fill: #1E5A59;
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+        .blob-motion {
+            position:  absolute;
+            transform: translateY(-20%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <h1>Curvy</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut necessitatibus consectetur impedit facere vero
+            eveniet animi reprehenderit, culpa quisquam totam quae, voluptates quibusdam. Optio consectetur tempore
+            architecto perferendis rerum dignissimos.</p>
+    </section>
+
+    <div class="spacer layer2 flip"> </div>
+    <section class="pink">
+        <h1>Curvy</h1>
+        <p>Iusto ipsa alias blanditiis laudantium ipsum perferendis explicabo, culpa assumenda praesentium nam nobis
+            quaerat similique repudiandae et, exercitationem a quam dolore quae provident mollitia? Odio cumque dolor
+            neque tempore ullam?</p>
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(455.1994021947162 293.82069545421615)">
+                <path id = "blobby1"
+                    d="M122.1 -98.3C172.1 -72.1 236.1 -36.1 235.7 -0.4C235.4 35.4 170.7 70.7 120.7 100.5C70.7 130.4 35.4 154.7 -8.2 162.9C-51.9 171.2 -103.7 163.4 -152.2 133.5C-200.7 103.7 -245.9 51.9 -246.1 -0.2C-246.3 -52.3 -201.7 -104.7 -153.2 -130.8C-104.7 -157 -52.3 -157 -8.1 -148.9C36.1 -140.7 72.1 -124.5 122.1 -98.3"
+                    fill="#bb004b"></path>
+            </g>
+            <g transform="translate(432.3857492956158 338.4796371473013)" style="visibility: hidden;">
+                <path id = "blobby2"
+                    d="M170.8 -180.1C211.4 -130.1 227.7 -65.1 212.9 -14.8C198 35.4 152 70.7 111.4 103.9C70.7 137 35.4 168 -11.4 179.5C-58.2 190.9 -116.4 182.8 -147.8 149.6C-179.1 116.4 -183.6 58.2 -183 0.6C-182.4 -57 -176.7 -114.1 -145.4 -164.1C-114.1 -214.1 -57 -257 4 -261C65.1 -265.1 130.1 -230.1 170.8 -180.1"
+                    fill="#bb004b"></path>
+            </g>
+        </svg>
+
+        <script>
+            const morphing = KUTE.fromTo(
+                '#blobby1',
+                { path: '#blobby1'},
+                { path: '#blobby2'},
+                { repeat: 999, duration: 3000, yoyo: true}
+            )
+            morphing.start()
+        </script>
+       
+    </section>
+    <div class="spacer layer2"></div>
+
+    <section class="first">
+        <h1>Curvy</h1>
+        <p>Doloremque vero ut quibusdam laborum aspernatur debitis quidem provident veritatis iure laboriosam sed et
+            illo animi nisi porro, totam, odio repudiandae? Modi, id. Eos delectus odio excepturi incidunt quidem
+            cumque.</p>
+
+        <div class="wave_left_bias">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="wave_bottom_right_bias">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="second">
+        <h1>Curvy</h1>
+        <p>Unde esse nihil fugiat perspiciatis architecto, quisquam sit, ab ipsa possimus accusantium natus tempora!
+            Assumenda nam earum nemo fuga sint enim quae exercitationem reprehenderit vitae aspernatur, deleniti ut
+            amet! Commodi.</p>
+    </section>
+    <section class="third">
+        <h1>Curvy</h1>
+        <p>Numquam accusamus atque alias distinctio tempora architecto ratione nulla quibusdam id accusantium? Delectus
+            illum nostrum explicabo asperiores, aliquam voluptatem optio ipsum quae reprehenderit laboriosam adipisci,
+            aut distinctio, harum ipsam velit.</p>
+    </section>
+    <section class="fourth">
+        <h1>Curvy</h1>
+        <p>Sequi vel reiciendis ducimus perferendis incidunt harum, doloribus a dolorem, laborum beatae blanditiis
+            dolores dolore? Quis, ipsam. Minima perferendis, obcaecati rerum in, repudiandae minus nobis dolores alias,
+            veritatis necessitatibus impedit.</p>
+    </section>
+    <section class="fifth">
+        <h1>Curvy</h1>
+        <p>Iusto ipsa alias blanditiis laudantium ipsum perferendis explicabo, culpa assumenda praesentium nam nobis
+            quaerat similique repudiandae et, exercitationem a quam dolore quae provident mollitia? Odio cumque dolor
+            neque tempore ullam?</p>
+    </section>
+</body>
+
+</html>
