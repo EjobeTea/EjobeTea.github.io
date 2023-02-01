@@ -9,9 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script>
+    <script defer src="app.js"></script>
 
     <style>
         body {
@@ -21,12 +22,15 @@
             background: #260033;
         }
 
+        h1 {
+            font-size: 2.75em;
+            transition-delay: 200ms;
+        }
+
         p {
             font-family: 'Fredoka';
             font-size: 1.5em;
-        }
-        h1 {
-            font-size: 2.75em;
+            transition-delay:  500ms;
         }
 
         section {
@@ -118,6 +122,7 @@
             transform: translateY(-20%);
             z-index: -1;
         }
+
     </style>
 
 </head>
@@ -126,7 +131,7 @@
     <div class="spacer layer2 flip"> </div>
     <section class="pink">
         <h1 class = "content">Hello, I'm Ethan Jobe.</br> Your next software engineer hire.</h1>
-        <p class = "content"></p>
+        <p class = "content">Bachelor of Science in Computer Science - Graduating May 2023</p>
         <svg id="blob-motion" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(455.1994021947162 293.82069545421615)">
@@ -142,7 +147,7 @@
         </svg>
 
         <script>
-            let dur = 2500;
+            let duration = 2500;
             const morphing = KUTE.fromTo(
                 '#blobby1',
                 { path: '#blobby1'},
@@ -150,11 +155,6 @@
                 { repeat: 1000, duration: 2500, yoyo: true}
             );
             morphing.start();
-
-            setInterval(() => {
-                duration = (duration === 2500) ? 6000 : 2500;
-                morphing.options.duration = duration;
-            }, 5000);
         </script>
        
     </section>
