@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script>
+
     <script defer src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -19,7 +20,7 @@
         body {
             margin: 0;
             font-family: 'Fredoka', sans-serif;
-            color: white;
+            color: #F1F1F1;
             background: #260033;
         }
 
@@ -31,14 +32,14 @@
         p {
             font-family: 'Fredoka';
             font-size: 1.5em;
-            transition-delay:  500ms;
+            transition-delay: 500ms;
         }
 
         img {
             width: 10em;
             height: width;
             border-radius: 50%;
-            border:  2px transparent;
+            border: 2px transparent;
         }
 
         section {
@@ -84,7 +85,7 @@
         }
 
         #blob-motion {
-            position:  absolute;
+            position: absolute;
             transform: translateY(-20%);
             z-index: -1;
 
@@ -92,7 +93,7 @@
 
         .spaced {
             aspect-ratio: 960/300;
-            width:100%;
+            width: 100%;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -109,30 +110,85 @@
         .layer3 {
             background-image: url('./layered-waves3.svg')
         }
-        
+
         .layer4 {
             background-image: url('./layered-waves4.svg')
         }
-
     </style>
 
 </head>
 
 <body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                    </svg>
+                    <span class="link-text">About Me</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M413.5 237.5c-28.2 4.8-58.2-3.6-80-25.4l-38.1-38.1C280.4 159 272 138.8 272 117.6V105.5L192.3 62c-5.3-2.9-8.6-8.6-8.3-14.7s3.9-11.5 9.5-14l47.2-21C259.1 4.2 279 0 299.2 0h18.1c36.7 0 72 14 98.7 39.1l44.6 42c24.2 22.8 33.2 55.7 26.6 86L503 183l8-8c9.4-9.4 24.6-9.4 33.9 0l24 24c9.4 9.4 9.4 24.6 0 33.9l-88 88c-9.4 9.4-24.6 9.4-33.9 0l-24-24c-9.4-9.4-9.4-24.6 0-33.9l8-8-17.5-17.5zM27.4 377.1L260.9 182.6c3.5 4.9 7.5 9.6 11.8 14l38.1 38.1c6 6 12.4 11.2 19.2 15.7L134.9 484.6c-14.5 17.4-36 27.4-58.6 27.4C34.1 512 0 477.8 0 435.7c0-22.6 10.1-44.1 27.4-58.6z" />
+                    </svg>
+                    <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z" />
+                    </svg>
+                    <span class="link-text">Skills</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                    </svg>
+                    <span class="link-text">Contact Me</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z" />
+                    </svg>
+                    <span class="link-text">Resume</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
     <div class="spacer layer2 flip"> </div>
 
     <section class="pink">
-        <h1 class = "content">Hello, I'm Ethan Jobe.</br> Your Next Software Engineer Hire.</h1>
-        <p class = "content">Bachelor of Science in Computer Science - Graduating May 2023</p>
+        <h1 class="content">Hello, I'm Ethan Jobe.</br> Your Next Software Engineer Hire.</h1>
+        <p class="content">Bachelor of Science in Computer Science - Graduating May 2023</p>
         <svg id="blob-motion" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(455.1994021947162 293.82069545421615)">
-                <path id = "blobby1"
+                <path id="blobby1"
                     d="M122.1 -98.3C172.1 -72.1 236.1 -36.1 235.7 -0.4C235.4 35.4 170.7 70.7 120.7 100.5C70.7 130.4 35.4 154.7 -8.2 162.9C-51.9 171.2 -103.7 163.4 -152.2 133.5C-200.7 103.7 -245.9 51.9 -246.1 -0.2C-246.3 -52.3 -201.7 -104.7 -153.2 -130.8C-104.7 -157 -52.3 -157 -8.1 -148.9C36.1 -140.7 72.1 -124.5 122.1 -98.3"
                     fill="#bb004b"></path>
             </g>
             <g transform="translate(432.3857492956158 338.4796371473013)" style="visibility: hidden;">
-                <path id = "blobby2"
+                <path id="blobby2"
                     d="M170.8 -180.1C211.4 -130.1 227.7 -65.1 212.9 -14.8C198 35.4 152 70.7 111.4 103.9C70.7 137 35.4 168 -11.4 179.5C-58.2 190.9 -116.4 182.8 -147.8 149.6C-179.1 116.4 -183.6 58.2 -183 0.6C-182.4 -57 -176.7 -114.1 -145.4 -164.1C-114.1 -214.1 -57 -257 4 -261C65.1 -265.1 130.1 -230.1 170.8 -180.1"
                     fill="#bb004b"></path>
             </g>
@@ -142,28 +198,31 @@
             let duration = 2500;
             const morphing = KUTE.fromTo(
                 '#blobby1',
-                { path: '#blobby1'},
-                { path: '#blobby2'},
-                { repeat: 1000, duration: 2500, yoyo: true}
+                { path: '#blobby1' },
+                { path: '#blobby2' },
+                { repeat: 1000, duration: 2500, yoyo: true }
             );
             morphing.start();
         </script>
-       
+
     </section>
 
     <div class="spacer layer2"></div>
 
     <section class="first">
         <h1>About Me</h1>
-        
+
         <p>Doloremque vero ut quibusdam laborum aspernatur debitis quidem provident veritatis iure laboriosam sed et
             illo animi nisi porro, totam, odio repudiandae? Modi, id. Eos delectus odio excepturi incidunt quidem
             cumque.</p>
         <img src="profile-picture.jfif" alt="Your Image">
-            
+
         <div class="wave1">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
             </svg>
         </div>
 
@@ -185,25 +244,21 @@
         <p>Numquam accusamus atque alias distinctio tempora architecto ratione nulla quibusdam id accusantium? Delectus
             illum nostrum explicabo asperiores, aliquam voluptatem optio ipsum quae reprehenderit laboriosam adipisci,
             aut distinctio, harum ipsam velit.</p>
-        
+
     </section>
 
     <div class="spaced layer3"></div>
 
     <section class="fourth">
         <h1>Contact Me</h1>
-        <p>Sequi vel reiciendis ducimus perferendis incidunt harum, doloribus a dolorem, laborum beatae blanditiis
-            dolores dolore? Quis, ipsam. Minima perferendis, obcaecati rerum in, repudiandae minus nobis dolores alias,
-            veritatis necessitatibus impedit.</p>
+        <p>Must have: Email, Subject, Message ...Optional: Fun Drawing canvas</p>
     </section>
 
     <div class="spaced layer4"></div>
 
     <section class="fifth">
         <h1>Download My Resume</h1>
-        <p>Iusto ipsa alias blanditiis laudantium ipsum perferendis explicabo, culpa assumenda praesentium nam nobis
-            quaerat similique repudiandae et, exercitationem a quam dolore quae provident mollitia? Odio cumque dolor
-            neque tempore ullam?</p>
+        <p>Modern resume download button</p>
     </section>
 </body>
 
