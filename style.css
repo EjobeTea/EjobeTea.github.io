@@ -36,12 +36,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-    width: 5rem;
-    height: 31vh;
     position: fixed;
-    top: 30vh;
     z-index: 1;
-    transition: width 600ms ease;
+    transition: width 400ms ease;
     background-color: #F1F1F1;
     border-radius: 1rem;
 }
@@ -59,7 +56,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-item {
     width: 100%;
-  }
+}
 
  .nav-link{
     display: flex;
@@ -72,7 +69,7 @@ body::-webkit-scrollbar-thumb {
 } 
 
 .nav-link svg {
-    min-wth: 2rem;
+    min-width: 2rem;
     margin: 0 1.5rem;
 }
 
@@ -81,16 +78,17 @@ body::-webkit-scrollbar-thumb {
     margin-left:1rem; 
 }
  
- .nav-link .link-text {
+.nav-link .link-text {
     display:hidden;
 }
 
 .nav-link:hover {
     filter:grayscale(0%) opacity(1);
-    background: var(#F1F1F1)
-    color: var(#1e1e24)
+    background: var(#F1F1F1);
+    color: var(#1e1e24);
     width: 14rem;
 }
+
 .nav-link:hover .link-text {
     display: block;
 }
@@ -108,12 +106,59 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     background-image: url('./download-solid.svg')
 }
-  
-navbar:hover.link-text {
-    display: block;
-}
 
 main {
     margin-left: 5rem;
     padding:1rem;
 }
+
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+      width: 100vw;
+      height: 5rem;
+      bottom: 0;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .nav-link {
+      justify-content: center;
+    }
+  
+    main {
+      margin: 0;
+    }
+
+    .navbar:hover {
+        width: 40rem;
+    }
+  }
+  
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+    .navbar {
+      width: 5rem;
+      height: 25rem;
+      top: 30vh;
+    }
+    .nav-link svg {
+        position: relative;
+    }
+  
+    .navbar:hover {
+      width: 13rem;
+    }
+  
+    .navbar:hover .link-text {
+      display: inline;
+    }
+
+    navbar:hover.link-text {
+        display: block;
+    }
+  }
+  

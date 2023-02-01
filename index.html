@@ -68,7 +68,12 @@
         }
 
         .fifth {
+            color: #000000;
             background-color: #8bd0c2;
+        }
+
+        .fifth svg {
+            transition-delay: 500ms;
         }
 
         .flip {
@@ -76,12 +81,8 @@
         }
 
         .content {
-            position: relative;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: color 0.5s ease-in-out;
+            color: #F1F1F1;
         }
 
         #blob-motion {
@@ -89,6 +90,49 @@
             transform: translateY(-20%);
             z-index: -1;
 
+        }
+
+        textarea {
+            font-family: 'Fredoka', sans-serif;
+            border: transparent;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-width: 10rem;
+            min-height: 5rem;
+            width: 25rem;
+            height: 10rem;
+            max-width: 60rem;
+            max-height: 40rem;
+        }
+
+        input {
+            font-family: 'Fredoka', sans-serif;
+            border: transparent;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: inherit;
+            height: 1.75rem;
+        }
+
+        button {
+            border: none;
+            font-family: 'Fredoka', sans-serif;
+            width: 100%;
+            max-width: inherit;
+            height: 1.75rem;
+            border: transparent;
+            border-radius: 0.25rem;
+            background-color: #F1F1F1;
+            color:#3eb59d;
+        }
+
+        button:hover {
+            cursor: pointer;
         }
 
         .spaced {
@@ -148,7 +192,7 @@
                         <path
                             d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z" />
                     </svg>
-                    <span class="link-text">Skills</span>
+                    <span class="link-text">Skills and Experience</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -212,9 +256,12 @@
     <section class="first">
         <h1 id="about">About Me</h1>
 
-        <p>Doloremque vero ut quibusdam laborum aspernatur debitis quidem provident veritatis iure laboriosam sed et
-            illo animi nisi porro, totam, odio repudiandae? Modi, id. Eos delectus odio excepturi incidunt quidem
-            cumque.</p>
+        <p>Currently, I am a student at the University of Texas at Arlington, set to graduate in May 2023.
+            Over the course of my Bachelor's, I have honed my skills and am eager to bring my technical expertise
+            to a dynamic team.  I believe in making a positive impact and am confident in my ability to drive success.
+            Ready to start the next chapter of my career and contribute to exciting projects. <br><br>
+            In my free time I enjoy playing videogames, cooking good food, and working out.
+        </p>
         <img src="profile-picture.jfif" alt="Your Image">
 
         <div class="wave1">
@@ -240,10 +287,11 @@
     <div class="spaced layer2"></div>
 
     <section class="third">
-        <h1 id="skills">Skills</h1>
-        <p>Numquam accusamus atque alias distinctio tempora architecto ratione nulla quibusdam id accusantium? Delectus
-            illum nostrum explicabo asperiores, aliquam voluptatem optio ipsum quae reprehenderit laboriosam adipisci,
-            aut distinctio, harum ipsam velit.</p>
+        <h1 id="skills">Skills and Experience</h1>
+        <p>I am a driven software engineer with experience in various programming languages, including Java, C, Python, and SQL.<br><br> 
+            During my robotics research internship in the summer of 2022, I applied my skills with ROS (Robotic Operating System) and Python to demonstrate the iRobot Create 2. <br><br>
+            I have experience working with a variety of tools and frameworks, such as Git, Android Studio, Jira, and Selenium. 
+            Additionally, I have worked with SQLite and MongoDB for databasing. Lastly, I have developed strong collaboration skills due to my school projects.</p>
 
     </section>
 
@@ -251,7 +299,20 @@
 
     <section class="fourth">
         <h1 id="contact">Contact Me</h1>
-        <p>Must have: Email, Subject, Message ...Optional: Fun Drawing canvas</p>
+        <form
+            action="https://formspree.io/f/xyyaklzp"
+            method="POST"
+            >
+            <label>
+                <input placeholder="yourEmail@email.com">
+            </label>
+            <br>
+            <label>
+                <textarea placeholder="Write your message here!"></textarea>
+            </label>
+            <br>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <div class="spaced layer4"></div>
