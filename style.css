@@ -32,17 +32,20 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #FFFFFF;
+    background: #F1F1F1;
 }
 
-.navbar { 
+.navbar {
     width: 5rem;
-    height: 100vh;
-    position:fixed;
-    background-color: #F1F1F1;
+    height: 31vh;
+    position: fixed;
+    top: 30vh;
     z-index: 1;
     transition: width 600ms ease;
+    background-color: #F1F1F1;
+    border-radius: 1rem;
 }
+  
 
 .navbar-nav {
     list-style: none;
@@ -84,33 +87,30 @@ body::-webkit-scrollbar-thumb {
 
 .nav-link:hover {
     filter:grayscale(0%) opacity(1);
-    background: var(#F1F1F1)  /*Change this*/
-    color: var(#1e1e24) /*Change this*/
+    background: var(#F1F1F1)
+    color: var(#1e1e24)
+    width: 14rem;
 }
 .nav-link:hover .link-text {
     display: block;
 }
 
 .navbar:hover {
-    width: 16rem;
+    width: 14rem;
 }
 
+#download-link {
+    display: inline-block;
+    padding: 5rem 5rem;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-image: url('./download-solid.svg')
+}
+  
 navbar:hover.link-text {
     display: block;
-}
-
-main {
-    margin-left: 5rem;
-}
-
-.fa-primary {
-    color: #ff7eee;
-    transition: var(--transition-speed);
-}
-
-.fa-secondary {
-    color: #df49a6;
-    transition: var(--transition-speed);
 }
 
 main {
