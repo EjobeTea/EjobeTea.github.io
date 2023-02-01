@@ -35,13 +35,13 @@ body::-webkit-scrollbar-thumb {
     background: #FFFFFF;
 }
 
-.navbar {
+.navbar { 
     width: 5rem;
     height: 100vh;
     position:fixed;
     background-color: #F1F1F1;
     z-index: 1;
-    transition: width 450ms ease;
+    transition: width 600ms ease;
 }
 
 .navbar-nav {
@@ -51,7 +51,12 @@ body::-webkit-scrollbar-thumb {
     display:flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
+
+.nav-item {
+    width: 100%;
+  }
 
  .nav-link{
     display: flex;
@@ -69,23 +74,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-text {
+    display:none;
     margin-left:1rem; 
 }
-
-.text-hidden {
-    visibility: hidden;
- }
  
  .nav-link .link-text {
-    visibility: hidden;
- }
- 
-
+    display:hidden;
+}
 
 .nav-link:hover {
     filter:grayscale(0%) opacity(1);
     background: var(#F1F1F1)  /*Change this*/
     color: var(#1e1e24) /*Change this*/
+}
+.nav-link:hover .link-text {
+    display: block;
 }
 
 .navbar:hover {
