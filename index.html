@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script>
     <script defer src="app.js"></script>
 
     <style>
@@ -23,11 +24,13 @@
         }
 
         h1 {
+            z-index: 1;
             font-size: 2.75em;
             transition-delay: 200ms;
         }
 
         p {
+            z-index: 1;
             color: #F1F1F1;
             font-family: 'Fredoka';
             font-size: 1.5em;
@@ -39,6 +42,8 @@
         }
         
         #contact{
+            position: relative;
+            text-align: center;
             color: #F1F1F1;
         }
 
@@ -106,12 +111,6 @@
         .content {
             text-align: center;
             color: #F1F1F1;
-        }
-
-        #blob-motion {
-            position: absolute;
-            transform: translateY(-20%);
-            z-index: -1;
         }
 
         textarea {
@@ -245,7 +244,8 @@
 
     <section class="pink">
         <h1 class="content">Hello, I'm Ethan Jobe.</br> Your Next Software Engineer Hire.</h1>
-        <p class="content">Bachelor of Science in Computer Science - Graduating May 2023</p>
+        <p class="content">Bachelor of Science in Computer Science - Graduating May 2023<br><br><br></p>
+        
         <svg id="blob-motion" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(455.1994021947162 293.82069545421615)">
@@ -260,17 +260,6 @@
             </g>
         </svg>
 
-        <script>
-            let duration = 2500;
-            const morphing = KUTE.fromTo(
-                '#blobby1',
-                { path: '#blobby1' },
-                { path: '#blobby2' },
-                { repeat: 1000, duration: 2500, yoyo: true }
-            );
-            morphing.start();
-        </script>
-
     </section>
 
     <div class="spacer layer2"></div>
@@ -280,7 +269,7 @@
         <h1 id="about">About Me</h1>
 
         <br><br>
-        <p>My name is Ethan Jobe and currently I am a student at the University of Texas at Arlington, set to graduate
+        <p class="content">I am a student at the University of Texas at Arlington, set to graduate
             in May 2023. <br><br>
             Over the course of my Bachelor's, I have honed my skills and I am now eager to bring my technical expertise
             to a dynamic team. I believe in making a positive impact and am confident in my ability to drive success.
@@ -311,27 +300,38 @@
         <div class="media-scroller snaps-inline">
             <div class="media-element">
                 <img src="profile-picture.jfif">
-                <p class="title">Short Title</p>
+                <p class="title">Natural Disaster Tracker App</p>
+                <p class="messg"> Android application that visualizes real time disasters.<br><br> Java, Android, RESTful APIs, Git</p>
             </div>
             <div class="media-element">
                 <img src="profile-picture.jfif">
-                <p class="title">Short Title</p>
+                <p class="title">Shift Notifier</p>
+                <p class="messg">Webscraping to create efficient shift searching process for a client. <br><br> Pythonm, Selenium, MongoDB</p>
             </div>
             <div class="media-element">
                 <img src="profile-picture.jfif">
-                <p class="title">Short Title</p>
+                <p class="title">FAT32 File System</p>
+                <p class="messg">Interprets a FAT32 file system image based on user commands. <br><br> C, GCC/GBD, Operating Systems</p>
             </div>
             <div class="media-element">
                 <img src="profile-picture.jfif">
-                <p class="title">Short Title</p>
+                <p class="title">Custom Order Gui</p>
+                <p class="messg">Users create and save orders for donuts and coffee. Developed in weekly sprints.<br><br>Java, Swing, Git, OOP</p>
             </div>
             <div class="media-element">
                 <img src="profile-picture.jfif">
-                <p class="title">Short Title</p>
+                <p class="title">Command Shell</p>
+                <p class="messg">User gives commands, program forks a child process, and executes the command. <br><br> C, GCC/GBD</p>
             </div>
             <div class="media-element">
                 <img src="profile-picture.jfif">
-                <p class="title">Short Title</p>
+                <p class="title">Network Tic Tac Toe</p>
+                <p class="messg">Two different raspberry pi users playing tic tac toe over network protocols.<br><br>C, GCC</p>
+            </div>
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">This Website!</p>
+                <p class="messg">Developed with love, but also with HTML, CSS, Javascript</p>
             </div>
         </div>
     </section>
@@ -341,7 +341,7 @@
     <section class="third">
         <h1 id="skills">Skills and Experience</h1>
         <br><br>
-        <p>I am a driven software engineer with experience in various programming languages, including Java, C, Python,
+        <p class="content">I am a driven software engineer with experience in various programming languages, including Java, C, Python,
             and SQL.<br><br>
             During my robotics research internship in the summer of 2022, I applied my skills with ROS (Robotic
             Operating System) and Python to demonstrate the iRobot Create 2. <br><br>

@@ -14,6 +14,14 @@ const observer = new IntersectionObserver((entries)=>{
         }
     });
 })
-const hiddenElements = document.querySelectorAll('h1, p, img, input, textarea, button, a#download-link');
+const hiddenElements = document.querySelectorAll('h1, .content, #mymug, input, textarea, button, a#download-link');
 hiddenElements.forEach((el)=>observer.observe(el));
 
+let duration = 2500;
+const morphing = KUTE.fromTo(
+    '#blobby1',
+    { path: '#blobby1' },
+    { path: '#blobby2' },
+    { repeat: 1000, duration: 2500, yoyo: true }
+);
+morphing.start();
