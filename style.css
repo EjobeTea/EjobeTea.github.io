@@ -1,3 +1,6 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
 .wave1 {
     position: absolute;
     top: 0;
@@ -116,49 +119,111 @@ main {
 /* Small screens */
 @media only screen and (max-width: 600px) {
     .navbar {
-      width: 100vw;
-      height: 5rem;
-      bottom: 0;
+        width: 100vw;
+        height: 5rem;
+        bottom: 0;
     }
-  
+
     .navbar-nav {
-      flex-direction: row;
+        flex-direction: row;
     }
-  
+
     .nav-link {
-      justify-content: center;
+        justify-content: center;
     }
-  
+
     main {
-      margin: 0;
+        margin: 0;
     }
 
     .navbar:hover {
         width: 40rem;
     }
-  }
+}
   
-  /* Large screens */
-  @media only screen and (min-width: 600px) {
+/* Large screens */
+@media only screen and (min-width: 600px) {
     .navbar {
-      width: 5rem;
-      height: 25rem;
-      top: 30vh;
+        width: 5rem;
+        height: 25rem;
+        top: 30vh;
     }
     .nav-link svg {
         position: relative;
     }
-  
+
     .navbar:hover {
-      width: 13rem;
+        width: 13rem;
     }
-  
+
     .navbar:hover .link-text {
-      display: inline;
+        display: inline;
     }
 
     navbar:hover.link-text {
         display: block;
     }
+}
+
+.media-scroller {
+    --spacer: 1rem;
+    display: grid;
+    gap: var(--spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+
+    padding: 0 var(--spacer) var(--spacer);
+
+    overflow-x:auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-scroller::-webkit-scrollbar {
+    border-radius: 1rem;
+    width: 1rem;
+    background-color: #f1f1f1;
+  }
+   
+  .media-scroller::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #333;
   }
   
+
+.media-element {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--spacer);
+    padding: var(--spacer);
+    background: var(--surface-2);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-3);
+}
+
+.media-element:hover{
+
+}
+
+.media-element > img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--spacer, 1rem);
+}
+
+.snaps-inline  > * {
+    scroll-snap-align: start;
+}
+
+.media-element p {
+    color:#1e1e24;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

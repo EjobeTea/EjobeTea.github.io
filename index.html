@@ -10,11 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script>
-
-    <script defer src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script defer src="app.js"></script>
 
     <style>
         body {
@@ -30,12 +28,33 @@
         }
 
         p {
+            color: #F1F1F1;
             font-family: 'Fredoka';
             font-size: 1.5em;
             transition-delay: 500ms;
         }
 
-        img {
+        #skills{
+            color: #F1F1F1;
+        }
+        
+        #contact{
+            color: #F1F1F1;
+        }
+
+        #about{
+            color: #F1F1F1;
+        }
+
+        #project{
+            color: #F1F1F1;
+        }
+
+        #resume{
+            color: #000000;
+        }
+
+        #mymug {
             width: 10em;
             height: width;
             border-radius: 50%;
@@ -52,23 +71,27 @@
         }
 
         .first {
+            color: #F1F1F1;
             background-color: #213c4c;
         }
 
         .second {
+            color: #F1F1F1;
             background-color: #1e5a59;
         }
 
         .third {
+            color: #F1F1F1;
             background-color: #1b7865;
         }
 
         .fourth {
+            color: #F1F1F1;
             background-color: #3eb59d;
         }
 
         .fifth {
-            color: #000000;
+            color: #000000 !important;
             background-color: #8bd0c2;
         }
 
@@ -89,7 +112,6 @@
             position: absolute;
             transform: translateY(-20%);
             z-index: -1;
-
         }
 
         textarea {
@@ -119,7 +141,7 @@
             height: 1.75rem;
         }
 
-        button {
+        #submit {
             border: none;
             font-family: 'Fredoka', sans-serif;
             width: 100%;
@@ -128,7 +150,7 @@
             border: transparent;
             border-radius: 0.25rem;
             background-color: #F1F1F1;
-            color:#3eb59d;
+            color: #3eb59d;
         }
 
         button:hover {
@@ -254,15 +276,21 @@
     <div class="spacer layer2"></div>
 
     <section class="first">
+        <br><br><br><br>
         <h1 id="about">About Me</h1>
 
-        <p>Currently, I am a student at the University of Texas at Arlington, set to graduate in May 2023.
-            Over the course of my Bachelor's, I have honed my skills and am eager to bring my technical expertise
-            to a dynamic team.  I believe in making a positive impact and am confident in my ability to drive success.
+        <br><br>
+        <p>My name is Ethan Jobe and currently I am a student at the University of Texas at Arlington, set to graduate
+            in May 2023. <br><br>
+            Over the course of my Bachelor's, I have honed my skills and I am now eager to bring my technical expertise
+            to a dynamic team. I believe in making a positive impact and am confident in my ability to drive success.
             Ready to start the next chapter of my career and contribute to exciting projects. <br><br>
             In my free time I enjoy playing videogames, cooking good food, and working out.
         </p>
-        <img src="profile-picture.jfif" alt="Your Image">
+
+        <br><br>
+
+        <img id="mymug" src="profile-picture.jfif" alt="Your Image">
 
         <div class="wave1">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -279,19 +307,49 @@
 
     <section class="second">
         <h1 id="project">Projects</h1>
-        <p>Unde esse nihil fugiat perspiciatis architecto, quisquam sit, ab ipsa possimus accusantium natus tempora!
-            Assumenda nam earum nemo fuga sint enim quae exercitationem reprehenderit vitae aspernatur, deleniti ut
-            amet! Commodi.</p>
+        <br><br>
+        <div class="media-scroller snaps-inline">
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">Short Title</p>
+            </div>
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">Short Title</p>
+            </div>
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">Short Title</p>
+            </div>
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">Short Title</p>
+            </div>
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">Short Title</p>
+            </div>
+            <div class="media-element">
+                <img src="profile-picture.jfif">
+                <p class="title">Short Title</p>
+            </div>
+        </div>
     </section>
 
     <div class="spaced layer2"></div>
 
     <section class="third">
         <h1 id="skills">Skills and Experience</h1>
-        <p>I am a driven software engineer with experience in various programming languages, including Java, C, Python, and SQL.<br><br> 
-            During my robotics research internship in the summer of 2022, I applied my skills with ROS (Robotic Operating System) and Python to demonstrate the iRobot Create 2. <br><br>
-            I have experience working with a variety of tools and frameworks, such as Git, Android Studio, Jira, and Selenium. 
-            Additionally, I have worked with SQLite and MongoDB for databasing. Lastly, I have developed strong collaboration skills due to my school projects.</p>
+        <br><br>
+        <p>I am a driven software engineer with experience in various programming languages, including Java, C, Python,
+            and SQL.<br><br>
+            During my robotics research internship in the summer of 2022, I applied my skills with ROS (Robotic
+            Operating System) and Python to demonstrate the iRobot Create 2. <br><br>
+            I have experience working with a variety of tools and frameworks, such as Git, Android Studio, Jira, and
+            Selenium.
+            Additionally, I have worked with SQLite and MongoDB for databasing. Lastly, I have developed strong
+            collaboration skills due to my school projects. <br><br>
+            Coming fresh out of college, I am excited to expand my skillset and knowledge.</p>
 
     </section>
 
@@ -299,10 +357,8 @@
 
     <section class="fourth">
         <h1 id="contact">Contact Me</h1>
-        <form
-            action="https://formspree.io/f/xyyaklzp"
-            method="POST"
-            >
+        <br><br>
+        <form action="https://formspree.io/f/xyyaklzp" method="POST">
             <label>
                 <input placeholder="yourEmail@email.com">
             </label>
@@ -311,7 +367,7 @@
                 <textarea placeholder="Write your message here!"></textarea>
             </label>
             <br>
-            <button type="submit">Send</button>
+            <button id="submit">Send</button>
         </form>
     </section>
 
@@ -319,14 +375,11 @@
 
     <section class="fifth">
         <h1 id="resume">Download My Resume</h1>
+        <br><br>
         <a id="download-link" href="./resume.pdf" download>
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                <path
-                    d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
-            </svg>
         </a>
     </section>
+
 </body>
 
 </html>
